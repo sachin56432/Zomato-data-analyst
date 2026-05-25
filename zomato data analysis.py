@@ -29,3 +29,15 @@ plt.plot(result,c='Green',marker='o')
 plt.xlabel('Type of restaurantt')
 plt.ylabel('Votes') 
 plt.show()
+
+max_votes=dataframe['votes'].max()
+restaurant_with_max_votes=dataframe.loc[dataframe['votes']==max_votes,'name']
+print('Restaurant with max votes: ',restaurant_with_max_votes)
+sns.countplot(x=dataframe['online_order'])
+
+plt.show()
+
+couple_data=dataframe['approx_cost(for two people)']
+sns.countplot(x=couple_data)
+plt.show()
+
